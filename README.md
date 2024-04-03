@@ -3,17 +3,29 @@ This repository contains files used for testing and evaluation for my dissertati
 
 ## Introduction
 
-mc_bruteforce.py contains the main implementation of my project. 
-personalised_steps.py is used to generate a number space used to best visualise the several graphs I have generated
-gw_mc.py implements the Goemans Williamson Approximation Algorithm. 
-boundary_num_qubits_depth.py derive and plot the circuit size threshold above which the quantum advantage is out of reach
+gibbs_dist.py contains implementation for the derivation of the Gibbs State Boundary, as well as the computation of the SDP Solution and the entropy density threshold 
+gw.py implements the Goemans Williamson Approximation Algorithm. This was adapted from Lalovic (2022)
+circ_size_thresh.py derive and plot the circuit size threshold above which the quantum advantage is out of reach. It is also used to decipher how many layers of the Quantum Approximate Optimisation Algorithm can be performed
 
-## How to Use
+## Prerequisites
 
-Outline the steps or instructions on how to use your project. Include prerequisites, installation steps, configuration, and any other important information users need to get started.
+pip install cvxpy networkx tqdm matplotlib numpy
 
-### Example:
+### Installation:
 
 1. **Step 1:** Clone the repository
    ```bash
    git clone https://github.com/your-username/your-project.git
+2. **Step 2:** Install the packages (in prerequisites)
+
+### Usage:
+**Plotting Gibbs State Boundary**
+Edit graph size, as  well as connectivity by adjusting the clearly labeled parameters.
+**Bounding Circuit Size**
+1. Using entropy density threshold output from gibbs_dist.py solution, input it as a the e_d_thresh parameter
+2. Change the variable name p_2 to edit the probability of error of two qubit gates
+3. Adjust the size of the plot, by changing N-values and D_values (representing the number of qubits and the depth of the circuit)
+
+### Contact
+James Gush - s2095346@ed.ac.uk.
+
