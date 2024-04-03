@@ -21,6 +21,7 @@ pip install cvxpy networkx tqdm matplotlib numpy
 ### Usage:
 **Plotting Gibbs State Boundary**
 Edit graph size, as  well as connectivity by adjusting the clearly labeled parameters.
+
 **Bounding Circuit Size**
 1. Using entropy density threshold output from gibbs_dist.py solution, input it as a the e_d_thresh parameter
 2. Change the variable name p_2 to edit the probability of error of two qubit gates
